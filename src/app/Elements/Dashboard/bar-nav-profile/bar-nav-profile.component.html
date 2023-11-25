@@ -1,0 +1,19 @@
+<ul class="nav navbar-nav nav-profile">
+    <li class="nav-item dropdown" dropdown>
+        <div id="button-profile" dropdownToggle class="nav-link" aria-controls="dropdown-profile">
+            <img src="assets/avatars/img_avatar2.png" class="img-profile" />
+
+            <span class="d-none d-md-block" style="float: left;">
+                <div class="text-user">Hossein Fakharian</div>
+                <div class="text-unit">Hello World</div>
+            </span>
+        </div>
+
+        <ul id="dropdown-profile" *dropdownMenu class="dropdown-menu menu-profile" aria-labelledby="button-profile">
+            <li><a (click)="clickNavProfile(1)" class="dropdown-item" href="#">{{resourceConfig.Headers.Pofile.MyProfile}}</a></li>
+            <li><a (click)="clickNavProfile(2)" class="dropdown-item" href="#">{{resourceConfig.Headers.Pofile.ChangePassword}}</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a (click)="clickNavProfile(4)" class="dropdown-item text-danger" href="#">{{resourceConfig.Headers.Pofile.Signout}}</a></li>
+        </ul>
+    </li>
+</ul>

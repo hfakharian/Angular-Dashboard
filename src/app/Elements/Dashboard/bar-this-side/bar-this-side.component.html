@@ -1,0 +1,67 @@
+
+<div class="bar-main">
+
+    <div *ngIf="loading" class="bar-main-loader">
+        <span class="loader"></span>
+    </div>
+    
+    <div *ngIf="navbarItems !== undefined && navbarItems != null" class="bar-side">
+        <ng-container *ngFor="let n of navbarItems; let nIndex = index;">
+            <div *ngIf="n.title !== undefined && n.title && n.children == null" class="nav-title">{{n.name}}</div>
+            <a *ngIf="n.title === undefined && !n.title && n.children == null && (n.query === undefined || n.query == null)"
+                [ngClass]="(n.active)?'nav-link active':'nav-link'" [routerLink]="n.url">
+                <i *ngIf="n.icon !== undefined && n.icon !== null" [ngClass]="'nav-icon ' + n.icon"></i>
+                {{n.name}}
+                <span *ngIf="n.badge !== undefined && n.badge !== null"
+                    [ngClass]="'badge ' + n.badge.class">{{n.badge.text}}</span>
+            </a>
+            <a *ngIf="n.title === undefined && !n.title && n.children == null && (n.query !== undefined && n.query !== null)"
+                [ngClass]="(n.active)?'nav-link active':'nav-link'" [routerLink]="n.url"
+                [queryParams]="n.query.queryParams">
+                <i *ngIf="n.icon !== undefined && n.icon !== null" [ngClass]="'nav-icon ' + n.icon"></i>
+                {{n.name}}
+                <span *ngIf="n.badge !== undefined && n.badge !== null"
+                    [ngClass]="'badge ' + n.badge.class">{{n.badge.text}}</span>
+            </a>
+            <div *ngIf="n.title === undefined && !n.title && n.children != null"
+                [ngClass]="(n.active)?'nav-dropdown open':'nav-dropdown'">
+                <div class="nav-link nav-dropdown-toggle" (click)="dropdownToggle($event)">
+                    <i *ngIf="n.icon !== undefined && n.icon !== null" [ngClass]="'nav-icon ' + n.icon"></i>
+                    {{n.name}}
+                    <i class="nav-arrow"></i>
+                </div>
+                <div class="nav-dropdown-items">
+                    <ng-container *ngFor="let n of n.children; let nIndex = index;">
+                        <div *ngIf="n.title !== undefined && n.title && n.children == null" class="nav-title">{{n.name}}
+                        </div>
+                        <a *ngIf="n.title === undefined && !n.title && n.children == null && (n.query === undefined || n.query == null)"
+                            [ngClass]="(n.active)?'nav-link active':'nav-link'" [routerLink]="n.url">
+                            <i *ngIf="n.icon !== undefined && n.icon !== null" [ngClass]="'nav-icon ' + n.icon"></i>
+                            {{n.name}}
+                            <span *ngIf="n.badge !== undefined && n.badge !== null"
+                                [ngClass]="'badge ' + n.badge.class">{{n.badge.text}}</span>
+                        </a>
+                        <a *ngIf="n.title === undefined && !n.title && n.children == null && (n.query !== undefined && n.query !== null)"
+                            [ngClass]="(n.active)?'nav-link active':'nav-link'" [routerLink]="n.url"
+                            [queryParams]="n.query.queryParams">
+                            <i *ngIf="n.icon !== undefined && n.icon !== null" [ngClass]="'nav-icon ' + n.icon"></i>
+                            {{n.name}}
+                            <span *ngIf="n.badge !== undefined && n.badge !== null"
+                                [ngClass]="'badge ' + n.badge.class">{{n.badge.text}}</span>
+                        </a>
+                    </ng-container>
+                </div>
+            </div>
+        </ng-container>
+    
+        <ng-content></ng-content>
+    
+        
+    </div>
+
+    
+
+</div>
+<button (click)="btnTogglerMinimizer()" class="app-this-side-minimizer" type="button"></button>
+
+

@@ -1,0 +1,141 @@
+body[dir="ltr"] {
+    html {direction:ltr;
+        }
+
+    header .navbar-brand {
+        justify-content: left;
+        float: left;
+    }
+
+    header .nav-profile{
+        float: right;
+    }
+
+    header .nav-profile .text-user{
+        text-align: left;
+    }
+    
+    header .nav-profile .text-unit{
+        text-align: left;
+    }
+
+    header .menu-profile{
+        right: 0;
+    }
+
+    header .menu-profile .dropdown-item{
+        text-align: left;
+    }
+
+    .breadcrumb.map-path .breadcrumb-menu {
+        margin-left: auto;
+    }
+
+    .breadcrumb-item+.breadcrumb-item {
+        padding-left: 0.5rem;
+        padding-right: 0;
+    }
+
+    .breadcrumb-item+.breadcrumb-item::before {
+        padding-left: 0;
+        padding-right: 0.5rem;
+    }
+
+    .scroll-to-top {
+        right: 20px;
+    }
+
+    body.app-that-side-lg-show .scroll-to-top {
+        right: 320px !important;
+    }
+
+    app-bar-this-side {
+        border-right: 1px solid #D8D8D8;
+    }
+
+    app-bar-that-side {
+        border-left: 1px solid #D8D8D8;
+    }
+
+    app-bar-color-theme{
+        float: left;
+    }
+
+    app-bar-color-theme .menu-theme{
+        left: 45px;
+    }
+
+    app-bar-message{
+        right: 0;
+    }
+}
+
+body[dir="rtl"] {
+    html {direction:rtl;
+    }
+
+    header .navbar-brand {
+        justify-content: right;
+        float: right;
+    }
+
+    header .nav-profile{
+        float: left;
+    }
+
+    header .nav-profile .text-user{
+        text-align: right;
+    }
+    
+    header .nav-profile .text-unit{
+        text-align: right;
+    }
+
+    header .menu-profile{
+        left: 0;
+    }
+
+    header .menu-profile .dropdown-item{
+        text-align: right;
+    }
+
+    .breadcrumb.map-path .breadcrumb-menu {
+        margin-right: auto;
+    }
+
+    .breadcrumb-item+.breadcrumb-item {
+        padding-left: 0;
+        padding-right: 0.5rem;
+    }
+
+    .breadcrumb-item+.breadcrumb-item::before {
+        padding-left: 0.5rem;
+        padding-right: 0;
+    }
+
+    .scroll-to-top {
+        left: 20px;
+    }
+
+    body.app-that-side-lg-show .scroll-to-top {
+        left: 320px !important;
+    }
+
+    app-bar-this-side {
+        border-left: 1px solid #D8D8D8;
+    }
+    app-bar-that-side {
+        border-right: 1px solid #D8D8D8;
+    }
+
+    app-bar-color-theme{
+        float: right;
+    }
+    app-bar-color-theme .menu-theme{
+        right: 45px;
+    }
+
+    app-bar-message{
+        left: 0;
+    }
+}

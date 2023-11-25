@@ -1,0 +1,22 @@
+<!-- <div class="row">
+    <div class="col-12">
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+            <button type="button" class="close close-alert" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+    </div>
+</div> -->
+
+<div *ngIf="messages.length !== null && messages.length > 0" class="row">
+    <div class="col-12 text-right">
+        <div *ngFor="let m of messages; let i = index;" class="alert alert-dismissible fade show"
+            [ngClass]="{'alert-success': m.type === 1, 'alert-warning' : m.type === 2, 'alert-danger' : m.type === 3, 'alert-info' : m.type === 4 }" role="alert">
+            {{m.comment}}
+            <button (click)="remove(i)" type="button" class="close close-alert" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+        </div>
+    </div>
+  </div>

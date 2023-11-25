@@ -1,0 +1,48 @@
+<main class="main d-flex align-items-center main-sign">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+
+          <div class="card-group">
+              <div class="card p-4">
+                <div class="card-body">
+                  <h1>Signup New User</h1>
+                  <p class="text-muted pb-3"><small>Signin with Username and Email Addres</small></p>
+
+                  <div class="input-group mb-3 mt-3">
+                      <span class="input-group-text"><i class="fa fa-user"></i></span>
+                    <input type="text" class="form-control"
+                      placeholder="username"
+                      autocomplete="username" required>
+                  </div>
+
+                  <div class="input-group mb-3 mt-3">
+                    <span class="input-group-text"><i class="fa fa-lock"></i></span>
+                    <input type="password" class="form-control"
+                      placeholder="password" required>
+                  </div>
+
+                  <div class="row mb-3 mt-4">
+                    <div class="col-12 text-right">
+                      
+                    </div>
+                    <div class="col-6">
+                      <button  class="btn btn-outline-secondary">
+                        <!-- <span class="spinner-border spinner-border-sm" role="status"></span> -->
+                        <span>Signup</span>
+                      </button>
+                    </div>
+                    <div class="col-6 text-left">
+                      <a [routerLink]="['/signin']"
+                        class="btn btn-sm btn-link p-0 text-ltr">Signin</a>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </main>

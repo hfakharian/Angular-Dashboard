@@ -1,0 +1,53 @@
+<div class="row">
+    <div class="col-12">
+      <div class="card mb-3">
+          <div class="card-body">
+            <h5 class="card-title">BarSide  Controller</h5>
+            <div class="row">
+              <div class="col-md-6">
+                <button (click)="barThisStatus(true)" type="button" class="btn btn-sm btn-success mx-1">MenuBar Open</button>
+                <button (click)="barThisStatus(false)" type="button" class="btn btn-sm btn-warning mx-1">MenuBar Close</button>
+  
+                <button (click)="barThisEnable(true)" type="button" class="btn btn-sm btn-info mx-1">MenuBar Enable</button>
+                <button (click)="barThisEnable(false)" type="button" class="btn btn-sm btn-danger mx-1">MenuBar Disable</button>
+              </div>
+              <div class="col-md-6">
+                <button (click)="barThatStatus(true)" type="button" class="btn btn-sm btn-success mx-1">TabsBar Open</button>
+                <button (click)="barThatStatus(false)" type="button" class="btn btn-sm btn-warning mx-1">TabsBar Close</button>
+  
+                <button (click)="barThatEnable(true)" type="button" class="btn btn-sm btn-info mx-1">MenuBar Enable</button>
+                <button (click)="barThatEnable(false)" type="button" class="btn btn-sm btn-danger mx-1">MenuBar Disable</button>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+  </div>
+    <div class="col-12">
+      <div class="card mb-3">
+          <div class="card-body">
+            <h5 class="card-title">Loading Central</h5>
+            
+            <button (click)="addLoading(true)" type="button" class="btn btn-success mx-1">Loading Show</button>
+            <button (click)="addLoading(false)" type="button" class="btn btn-warning mx-1">Loading Hide</button>
+          </div>
+        </div>
+  </div>
+      <div class="col-12">
+          <div class="card mb-3">
+              <div class="card-body">
+                <h5 class="card-title">Message Central</h5>
+                
+                <button (click)="addMessage(1)" type="button" class="btn btn-success mx-1">Message Success</button>
+                <button (click)="addMessage(2)" type="button" class="btn btn-warning mx-1">Message Warning</button>
+                <button (click)="addMessage(3)" type="button" class="btn btn-danger mx-1">Message Danger</button>
+                <button (click)="addMessage(4)" type="button" class="btn btn-info mx-1">Message Info</button>
+                <button (click)="addMessage(5)" type="button" class="btn btn-light mx-1">Multi Message</button>
+              </div>
+            </div>
+      </div>
+      
+      
+  </div>
+  
+  

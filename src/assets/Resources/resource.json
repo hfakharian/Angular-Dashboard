@@ -1,0 +1,30 @@
+{
+    "ComponentDirection": true,
+    "ComponentLoading": "Loading",
+    "Routes":{
+        "Home": "Home",
+        "Error404": "404",
+        "Error500": "500",
+        "Signin": "Login",
+        "Signup": "Register",
+        "ForgotPassword": "Forgot Password",
+        "Dashboard": {
+            "Dashboard": "Dashboard"
+        },
+        "Color": {
+            "Theme": "Theme",
+            "Colors": "Colors"
+        },
+        "Smart": {
+            "Head": "Smart",
+            "FileUploader": "File Uploader"
+        }
+    },
+    "Headers":{
+        "Pofile":{
+            "MyProfile":"My Profile",
+            "ChangePassword":"Change Password",
+            "Signout": "Signout"
+        }
+    }
+}

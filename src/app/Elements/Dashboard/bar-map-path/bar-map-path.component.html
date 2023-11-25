@@ -1,0 +1,7 @@
+<ol class="breadcrumb map-path">
+  <ng-container *ngFor="let d of menuItems; let nIndex = index;">
+    <li *ngIf="menuItems.length !== (nIndex + 1)" class="breadcrumb-item"><a [routerLink]="d.path">{{d.title}}</a></li>
+    <li *ngIf="menuItems.length === (nIndex + 1)" class="breadcrumb-item active">{{d.title}}</li>
+  </ng-container>
+  <ng-content></ng-content>
+</ol>

@@ -1,0 +1,11 @@
+<div class="btn-theme">
+    <img (click)="btnToggler()" src="/assets/icons/theme.svg">
+
+    <ul class="menu-theme" [ngClass]="{'open': navTheme === true, 'close' : navTheme === false }">
+        <li (click)="onChangeTheme('theme-1')" class="item" style="background-color: #D8D8D8;"></li>
+        <li (click)="onChangeTheme('theme-2')" class="item" style="background-color: #20A8D8;"></li>
+        <li (click)="onChangeTheme('theme-3')" class="item" style="background-color: #01A57C;"></li>
+        <li (click)="onChangeTheme('theme-4')" class="item" style="background-color: #602994;"></li>
+        <li (click)="onChangeTheme('theme-5')" class="item" style="background-color: #3A3A3A;"></li>
+    </ul>
+</div>

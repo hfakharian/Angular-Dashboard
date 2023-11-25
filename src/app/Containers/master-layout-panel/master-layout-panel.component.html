@@ -1,0 +1,73 @@
+<header>
+
+    <app-bar-loading></app-bar-loading>
+    
+    <app-bar-this-side-toggler #barThisSideTogglerComponent [barThisSideOpen]="true" [barThisSideMinimizer]="false" barThisSideSize="md"
+        barThisSideIcon="/assets/icons/app-this-side-btn.svg" barThisSideControl="appBarThisSide"
+        (barThisSideStatus)="dataStatus($event)"></app-bar-this-side-toggler>
+
+    <a class="navbar-brand">
+        <img class="img-logo d-none d-md-block" src="/assets/logo/logo.svg">
+        <img class="img-logo d-block d-md-none" src="/assets/logo/sygnet.svg">
+    </a>
+
+    
+
+    <app-bar-that-side-toggler #barThatSideTogglerComponent [barThatSideOpen]="false" barThatSideSize="lg"
+        barThatSideIcon="/assets/icons/app-that-side-btn.svg" barThatSideControl="appBarThatSide"
+        (barThatSideStatus)="dataStatus($event)"></app-bar-that-side-toggler>
+
+        <app-bar-nav-profile></app-bar-nav-profile>
+
+        <app-bar-color-theme class="d-none d-md-block"></app-bar-color-theme>
+        
+</header>
+
+<app-bar-this-side id="appBarThisSide" [navbarItems]="navbarItem">
+</app-bar-this-side>
+<app-bar-that-side id="appBarThatSide">
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">
+            <i class="fa fa-sitemap" style="font-size: 1.5rem; padding: .4rem;"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="fa fa-lock" style="font-size: 1.5rem; padding: .4rem;"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fa fa-user" style="font-size: 1.5rem; padding: .4rem;"></i></a>
+        </li>
+      </ul>
+</app-bar-that-side>
+
+<div class="app-body">
+    <app-bar-message [hideDelay]="7000"></app-bar-message>
+    <main>
+        <app-bar-map-path>
+            <li class="breadcrumb-menu d-md-down-none">
+                <div aria-label="Button group with nested dropdown" class="btn-group" role="group">
+                    <a class="btn" routerLink="/"><i class="fa fa-tachometer"></i> &nbsp;Dashboard</a>
+                    <a class="btn" routerLink="/"><i class="fa fa-cog"></i> &nbsp;Settings</a>
+                </div>
+            </li>
+        </app-bar-map-path>
+
+        <div class="container-fluid">
+
+            <router-outlet></router-outlet>
+
+            <button title="scroll to top" [ngClass]="{'show-scroll': showScroll}" (click)="scrollToTop()"
+                class="btn btn-lg btn-outline-dark fa fa-angle-up scroll-to-top">
+            </button>
+
+        </div><!-- /.container-fluid -->
+    </main>
+</div>
+
+<footer>
+    <span><a href="http://coredesign.ir">AngularDashboard</a> © 2019 creativeLabs.</span>
+    <span class="ms-auto">Powered by <a href="http://coredesign.ir">AngularDashboard for Angular</a></span>
+</footer>

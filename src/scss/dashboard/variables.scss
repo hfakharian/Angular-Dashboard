@@ -1,0 +1,161 @@
+$app-bar-sides-sm-width : 200px;
+$app-bar-sides-md-width : 250px;
+$app-bar-sides-lg-width : 300px;
+
+$app-bar-sides-sm-width-minus : -200px;
+$app-bar-sides-md-width-minus : -250px;
+$app-bar-sides-lg-width-minus : -300px;
+
+
+$app-bar-header-height: 3rem;
+
+$app-bar-header-back-color:#fff;
+$app-bar-this-side-back-color:#343434;
+$app-bar-this-side-back-dropdown:#191919;
+$app-bar-this-side-scroll-color:#666666;
+$app-bar-that-side-back-color:#fff;
+
+
+
+@mixin appMaster(
+    $name,
+    $header-background, 
+    $header-border, 
+    $footer-background, 
+    $footer-border, 
+    $main-background,
+    $sign-background,
+    ) {
+
+    ##{$name} {
+        header{
+            background-color: $header-background;
+            border-bottom: 1px solid $header-border;
+        }
+
+        .breadcrumb.map-path {
+            background-color: $header-background;
+            border-bottom: 1px solid $header-border;
+        }
+
+        main {
+            background-color: $main-background;
+        }
+
+        footer{
+            background-color: $footer-background;
+            border-top: 1px solid $footer-border;
+        }
+
+        app-dashboard, .bg-sign {
+            background-color: $sign-background;
+        }
+
+        .main-sign {
+            background: radial-gradient(#000, transparent);
+        }
+    }
+  }
+  @include appMaster(theme-1, #ffffff, #D8D8D8, #E4E4E4, #ffffff, #f8f8f8, #ADADAD);
+  @include appMaster(theme-2, #ffffff, #D8D8D8, #E4E4E4, #ffffff, #F7F8FA, #20A8D8);
+  @include appMaster(theme-3, #ffffff, #D8D8D8, #E4E4E4, #ffffff, #F7F8FA, #01A57C);
+  @include appMaster(theme-4, #ffffff, #DFDFDF, #ffffff, #DFDFDF, #E5E5E5, #602994);
+  @include appMaster(theme-5, #ffffff, #ebebeb, #f8f8f8, #e0e0e0, #e7e7e7, #3A3A3A);
+
+  @mixin appThisSide(
+    $name,
+    $this-side-background, 
+    $this-side-background-gradient,
+    $that-side-background, 
+    $this-side-title-color, 
+    $this-side-icon-color,
+    $this-side-text-color, 
+    $this-side-hover-background, 
+    $this-side-hover-icon-color, 
+    $this-side-hover-text-color,
+    $this-side-active-background, 
+    $this-side-active-icon-color, 
+    $this-side-active-text-color,
+    $this-side-dropdown-arrow-background, 
+    $this-side-dropdown-background, 
+    $this-side-scroll-background) {
+
+    ##{$name} {
+        app-bar-this-side{
+            // background: $this-side-background;
+            background: $this-side-background;
+            background: linear-gradient(45deg, $this-side-background, $this-side-background-gradient);
+            
+            
+            color: $this-side-text-color;
+        }
+
+        app-bar-that-side {
+            background-color: $that-side-background;
+        }
+
+        
+        
+        .bar-side .nav-dropdown.open {
+            background-color:$this-side-dropdown-background ;
+        }
+        .bar-side .nav-link.nav-dropdown-toggle .nav-arrow::before {
+            background-color: $this-side-dropdown-arrow-background;
+        }
+
+        .bar-side .nav-link.nav-dropdown-toggle:hover .nav-arrow::before {
+            background-color: $this-side-hover-icon-color;
+        }
+
+        .bar-side .nav-dropdown.open::before{
+            background-color: $this-side-background-gradient;
+        }
+
+        .bar-side .nav-title{
+            color: $this-side-title-color;
+        }
+        .bar-side .nav-link{
+            color: $this-side-text-color;
+        }
+        .bar-side .nav-link .nav-icon {
+            color: $this-side-icon-color;
+        }
+
+        .bar-side .nav-link:hover{
+            color: $this-side-hover-text-color;
+            background-color: $this-side-hover-background;
+        }
+        .bar-side .nav-link:hover .nav-icon{
+            color: $this-side-hover-icon-color;
+        }
+
+        .bar-side .nav-link.active{
+            color: $this-side-active-text-color;
+            background-color: $this-side-active-background;
+        }
+        .bar-side .nav-link.active .nav-icon{
+            color: $this-side-active-icon-color;
+        }
+
+        app-bar-this-side .bar-main::-webkit-scrollbar-track
+        {
+            background-color: transparent;
+        }
+
+        app-bar-this-side .bar-main::-webkit-scrollbar
+        {
+            background-color: transparent;
+        }
+
+        app-bar-this-side .bar-main::-webkit-scrollbar-thumb
+        {
+            background-color: $this-side-scroll-background;
+        }
+    }
+
+  }
+  @include appThisSide(theme-1, #ececec, #FFFFFF, #FFFFFF, #000000, #5F5F5F, #5F5F5F, #5F5F5F, #ffffff, #ffffff, #5F5F5F, #ffffff, #ffffff, #5F5F5F, #e7e7e7, #F2F2F2);
+  @include appThisSide(theme-2, #1D99C2, #20A8D8, #ffffff, #344d55, #ACE1F2, #ffffff, #1D99C2, #ffffff, #ffffff, #187ea0, #ffffff, #ffffff, #ffffff, #187ea0, #ACE1F2);
+  @include appThisSide(theme-3, #008060, #01A57C, #ffffff, #004F3C, #B3FFEC, #ffffff, #019470, #015A44, #ffffff, #019470, #015A44, #ffffff, #B3FFEC, #018363, #0EFEC2);
+  @include appThisSide(theme-4, #491975, #602994, #ffffff, #B892DE, #B892DE, #ffffff, #52227D, #ffffff, #ffffff, #52227D, #ffffff, #ffffff, #ffffff, #441D67, #BD95E1);
+  @include appThisSide(theme-5, #202020, #3A3A3A, #ffffff, #ffffff, #BEBEBE, #ffffff, #5F5F5F, #ffffff, #ffffff, #131313, #cecece, #ffffff, #ffffff, #181818, #858585);

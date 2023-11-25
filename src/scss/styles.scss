@@ -1,0 +1,56 @@
+@import "dashboard/styles";
+@import "fonts";
+
+body{
+    font-family: 'Roboto-Medium', tahoma !important;
+}
+
+.main-loading{
+    flex: 1;
+    min-width: 0;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.main-loading-body{
+    width: 100%;
+    max-width: 200px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+
+.main-loading-body img{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 60px;
+    height: 60px;
+}
+
+.lds-dual-ring {
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+  }
+  .lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 6px solid #9DA8B0;
+    border-color: #9DA8B0 transparent #9DA8B0 transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+  }
+  @keyframes lds-dual-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }

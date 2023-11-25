@@ -8,3 +8,9 @@ Use the package.json manager npm to install it.
 ```bash
 npm install
 ```
+
+## Desktop View
+![alt text](https://github.com/hfakharian/Angular-Dashboard/blob/main/src/assets/view%20pc.jpg?raw=true)
+
+## Mobile View
+![alt text](https://github.com/hfakharian/Angular-Dashboard/blob/main/src/assets/view%20mb.jpg?raw=true)

@@ -17,6 +17,7 @@ import { BarColorThemeComponent } from './bar-color-theme/bar-color-theme.compon
 import { BarNavProfileComponent } from './bar-nav-profile/bar-nav-profile.component';
 import { BarMessageComponent } from './bar-message/bar-message.component';
 import { BarLoadingComponent } from './bar-loading/bar-loading.component';
+import { BarTabStickyComponent } from './bar-tab-sticky/bar-tab-sticky.component';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { BarLoadingComponent } from './bar-loading/bar-loading.component';
     BarColorThemeComponent,
     BarMessageComponent,
     BarLoadingComponent,
+    BarTabStickyComponent,
   ],
   declarations: [
     BarThisSideComponent,
@@ -47,6 +49,7 @@ import { BarLoadingComponent } from './bar-loading/bar-loading.component';
     BarColorThemeComponent,
     BarMessageComponent,
     BarLoadingComponent,
+    BarTabStickyComponent,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
